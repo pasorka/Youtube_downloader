@@ -68,8 +68,10 @@ def download(link: str, path: str, name: str = '', music: bool= False, resolutio
             content = yt.streams.get_highest_resolution()
             
         format_file: str = '.mp4'
-            
+    
+    name = name[:25]   
     name += format_file
+    
     content.download(path, name)
 
 
